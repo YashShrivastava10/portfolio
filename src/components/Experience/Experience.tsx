@@ -4,7 +4,7 @@ import { experiences } from "../../constants/expereinceData";
 
 const Experience = () => {
   return (
-    <section className="py-20 bg-secondary" id="experience">
+    <section className="w-full py-20 bg-secondary" id="experience">
       <div className="container px-4 mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

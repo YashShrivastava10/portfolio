@@ -1,5 +1,6 @@
-import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,13 +43,15 @@ const Header = () => {
           <div className="items-center hidden gap-8 md:flex">
             <div className="flex gap-6">
               {navigation.map((item) => (
-                <button
+                <motion.button
+                  whileHover={{ scale: 0.9 }}
+                  transition={{ duration: 0.5 }}
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
                   className="transition-colors hover:text-accent"
                 >
                   {item.name}
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>

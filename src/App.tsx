@@ -9,10 +9,10 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="min-h-screen bg-primary text-textColor">
+    <div className="w-screen h-screen bg-primary text-textColor">
       <Header />
       <Toaster />
-      <main>
+      <main className="w-full overflow-x-hidden">
         <Hero />
         <Skills />
         <Experience />

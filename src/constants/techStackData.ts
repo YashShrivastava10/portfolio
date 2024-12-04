@@ -4,6 +4,7 @@ export const techStack = {
     "Next.js",
     "TypeScript",
     "JavaScript",
+    "React Router",
     "Redux",
     "Redux Toolkit",
     "i18next",
@@ -13,5 +14,5 @@ export const techStack = {
     "Material UI",
   ],
   backend: ["Node.js", "Next.js", "Auth.js", "Express.js", "MongoDB", "JWT"],
-  tools: ["Parcel", "Vite", "NPM", "Vercel", "Git", "Postman"],
+  tools: ["Parcel", "Vite", "NPM", "Vercel", "Git", "Postman", "EmailJS"],
 };

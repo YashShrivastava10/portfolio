@@ -1,22 +1,27 @@
-import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { FileUser, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
   const socialLinks = [
     {
-      icon: <Github size={24} />,
+      icon: <Github size={30} />,
       href: "https://github.com/YashShrivastava10",
       label: "GitHub",
     },
     {
-      icon: <Linkedin size={24} />,
+      icon: <Linkedin size={30} />,
       href: "https://www.linkedin.com/in/yash-shrivastava-7980911bb/",
       label: "LinkedIn",
     },
     {
-      icon: <Mail size={24} />,
+      icon: <Mail size={30} />,
       href: "mailto:shrivastavayas10@gmail.com",
       label: "Email",
+    },
+    {
+      icon: <FileUser size={30} />,
+      href: "/Yash_Resume_Full_Stack.pdf",
+      label: "Resume",
     },
   ];
 
@@ -26,7 +31,7 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-12 md:flex-row">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex-1"
           >
@@ -36,44 +41,42 @@ const Hero = () => {
               <span className="text-accent">Yash Shrivastava</span>
             </h1>
             <h2 className="mb-6 text-xl md:text-2xl text-textColor/80">
-              Full Stack Developer
+              Full-Stack Developer
             </h2>
             <div className="flex items-center gap-10">
               <div className="flex gap-6">
                 {socialLinks.map((link) => (
-                  <motion.a
+                  <a
                     key={link.label}
-                    whileHover={{ scale: 1.1 }}
                     href={link.href}
+                    download={
+                      link.label === "Resume"
+                        ? "Yash_Full_Stack_Resume.pdf"
+                        : false
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors text-textColor hover:text-accent"
+                    className="flex items-center gap-2 py-2 rounded-full text-textColor hover:text-accent social"
                     aria-label={link.label}
                   >
-                    {link.icon}
-                  </motion.a>
+                    <span className="transition-all">{link.icon}</span>
+                    <label className="text-2xl cursor-pointer">
+                      {link.label}
+                    </label>
+                  </a>
                 ))}
               </div>
-              <a
-                href="/Yash_Resume_Full_Stack.pdf"
-                download="Yash_Full_Stack_Resume.pdf"
-                className="flex items-center gap-2 px-4 py-2 transition-colors rounded-md bg-accent text-primary hover:bg-accent/90"
-              >
-                <Download size={20} />
-                Resume
-              </a>
             </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex-1"
           >
             <img
               src="/profile.png"
               alt="Yash Shrivastava"
-              loading="lazy"
               className="object-cover w-64 h-64 mx-auto border-4 rounded-full md:w-96 md:h-96 border-accent"
             />
           </motion.div>

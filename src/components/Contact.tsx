@@ -17,8 +17,8 @@ const Contact = () => {
         const result = await sendEmail(form);
         if (result) {
           form.reset();
-          setIsLoading(false);
         }
+        setIsLoading(false);
       })(),
       {
         loading: "Sending...",
