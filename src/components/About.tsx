@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { calculateTotalExperienceRounded } from "../utils/calculateExp";
 
 const About = () => {
   return (
@@ -17,25 +18,44 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          I’m a Full-Stack Developer with 3 years of experience in building
-          dynamic web applications using React, Next.js, and Node.js. I’m
-          passionate about creating seamless user experiences and reliable
-          backend systems. With a strong focus on performance optimization and
-          scalable architecture, I strive to deliver the best results for each
-          project.
-          <br />
+          I’m a Full-Stack Developer with {calculateTotalExperienceRounded()}{" "}
+          years of experience in building dynamic web applications using React,
+          Next.js, and Node.js. I’m passionate about creating seamless user
+          experiences and reliable backend systems. With a strong focus on
+          performance optimization and scalable architecture, I strive to
+          deliver the best results for each project.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           When I’m not coding, you’ll find me diving into multiplayer games,
           where I love strategizing with others to outsmart the competition. I’m
           also a huge tech enthusiast, always staying updated with the latest
           smartphone trends and innovations. Additionally, I love watching web
           series and anime, often getting inspired by captivating stories and
           character development.
-          <br />
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="hidden md:flex"
+        >
           I’m always excited to take on new challenges, contribute to impactful
           projects, and evolve as a developer. Let’s connect and create
           something great!
-          <br />
-          <br />
+        </motion.p>
+
+        <br />
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           Fun fact: At one point, I considered a job in Hyderabad just for its
           legendary biryani!
         </motion.p>

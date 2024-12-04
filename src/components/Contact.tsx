@@ -1,10 +1,21 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { sendEmail } from "../utils/sendEmail";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
+
+    setIsLoading(true);
+    const form = e.currentTarget;
+    const result = await sendEmail(form);
+    setIsLoading(false);
+    if (result) {
+      alert("Thank You for contacting Me !!");
+      form.reset();
+    }
   };
 
   return (
@@ -72,6 +83,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className="w-full px-4 py-2 rounded-lg bg-secondary text-textColor focus:outline-none focus:ring-2 focus:ring-accent"
                   required
                 />
@@ -83,6 +95,7 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="w-full px-4 py-2 rounded-lg bg-secondary text-textColor focus:outline-none focus:ring-2 focus:ring-accent"
                   required
                 />
@@ -93,6 +106,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="w-full px-4 py-2 rounded-lg bg-secondary text-textColor focus:outline-none focus:ring-2 focus:ring-accent"
                   required
@@ -100,9 +114,16 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="px-6 py-3 font-medium transition-colors rounded-lg bg-accent text-primary hover:bg-accent/90"
+                disabled={isLoading}
+                className="flex px-6 py-3 font-medium transition-colors rounded-lg bg-accent text-primary hover:bg-accent/90"
               >
-                Send Message
+                {isLoading && (
+                  <svg
+                    className="w-5 h-5 mr-3 border-[3px] rounded-full border-secondary border-t-accent animate-spin"
+                    viewBox="0 0 24 24"
+                  />
+                )}
+                {!isLoading && "Send Message"}
               </button>
             </form>
           </motion.div>
