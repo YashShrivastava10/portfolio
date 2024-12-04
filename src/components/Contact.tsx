@@ -2,20 +2,31 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { sendEmail } from "../utils/sendEmail";
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    setIsLoading(true);
     const form = e.currentTarget;
-    const result = await sendEmail(form);
-    setIsLoading(false);
-    if (result) {
-      alert("Thank You for contacting Me !!");
-      form.reset();
-    }
+
+    setIsLoading(true);
+    await toast.promise(
+      (async () => {
+        const result = await sendEmail(form);
+        if (result) {
+          form.reset();
+          setIsLoading(false);
+        }
+      })(),
+      {
+        loading: "Sending...",
+        success: "Thank You for contacting me!!",
+        error: "Failed to send email. Please try again.",
+      },
+      { position: "bottom-center" }
+    );
   };
 
   return (
@@ -117,13 +128,7 @@ const Contact = () => {
                 disabled={isLoading}
                 className="flex px-6 py-3 font-medium transition-colors rounded-lg bg-accent text-primary hover:bg-accent/90"
               >
-                {isLoading && (
-                  <svg
-                    className="w-5 h-5 mr-3 border-[3px] rounded-full border-secondary border-t-accent animate-spin"
-                    viewBox="0 0 24 24"
-                  />
-                )}
-                {!isLoading && "Send Message"}
+                Send Message
               </button>
             </form>
           </motion.div>
