@@ -1,37 +1,14 @@
-import { FileUser, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import { socialLinks } from "../constants/socialLinkData";
 
 const Hero = () => {
-  const socialLinks = [
-    {
-      icon: <Github size={30} />,
-      href: "https://github.com/YashShrivastava10",
-      label: "GitHub",
-    },
-    {
-      icon: <Linkedin size={30} />,
-      href: "https://www.linkedin.com/in/yash-shrivastava-7980911bb/",
-      label: "LinkedIn",
-    },
-    {
-      icon: <Mail size={30} />,
-      href: "mailto:shrivastavayas10@gmail.com",
-      label: "Email",
-    },
-    {
-      icon: <FileUser size={30} />,
-      href: "/Yash_Resume_Full_Stack.pdf",
-      label: "Resume",
-    },
-  ];
-
   return (
     <section className="flex items-center min-h-screen pt-20" id="hero">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col items-center gap-12 md:flex-row">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex-1"
           >
@@ -70,12 +47,12 @@ const Hero = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex-1"
           >
             <img
-              src="/profile.png"
+              src="/profile.webp"
               alt="Yash Shrivastava"
               className="object-cover w-64 h-64 mx-auto border-4 rounded-full md:w-96 md:h-96 border-accent"
             />
