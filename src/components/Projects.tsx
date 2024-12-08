@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Github, Link as LinkIcon } from "lucide-react";
 import { projects } from "../constants/projectsData";

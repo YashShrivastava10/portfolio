@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import TimelineItem from "./TimelineItem";
 import { experiences } from "../../constants/expereinceData";

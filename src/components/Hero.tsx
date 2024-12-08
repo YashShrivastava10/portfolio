@@ -1,5 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { socialLinks } from "../constants/socialLinkData";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -51,10 +54,12 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="flex-1"
           >
-            <img
+            <Image
               src="/profile.webp"
               alt="Yash Shrivastava"
-              className="object-cover w-64 h-64 mx-auto border-4 rounded-full md:w-96 md:h-96 border-accent"
+              width={256}
+              height={256}
+              className="object-cover mx-auto border-4 rounded-full md:w-96 md:h-96 border-accent"
             />
           </motion.div>
         </div>
