@@ -2,6 +2,7 @@ export interface Experience {
   title: string;
   company: string;
   period: string;
+  type?: string;
 }
 
 export const experiences: Experience[] = [
@@ -21,6 +22,7 @@ export const experiences: Experience[] = [
     period: "Apr 2020 - Jun 2020",
   },
   {
+    type: "study",
     title: "Bachelors in Technology",
     company: "KIIT University, CGPA: 8.3",
     period: "Apr 2017 - Jun 2021",

@@ -1,50 +1,70 @@
-import { motion } from "framer-motion";
+import React from "react";
+import TimelineCircle from "./TimeLineCircle";
+import { CalendarDays, Building2 } from "lucide-react";
+import MotionContainer from "../common/MotionContainer";
 
 interface TimelineItemProps {
   title: string;
   company: string;
   period: string;
   isLast?: boolean;
+  type?: string;
+  isLeft?: boolean;
 }
 
 const TimelineItem = ({
   title,
   company,
   period,
-  isLast,
+  type = "exp",
+  isLast = false,
+  isLeft,
 }: TimelineItemProps) => {
+  const containerClass = isLeft
+    ? "flex-row-reverse md:ml-auto"
+    : "flex-row md:mr-auto";
+
+  const contentClass = isLeft
+    ? "md:items-end md:text-right"
+    : "md:items-start md:text-left";
+
   return (
-    <div className="flex gap-4 mb-8">
-      {/* Timeline dot and line */}
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ duration: 0.3 }}
-        className="relative mt-2"
-      >
-        {/* Circle */}
-        <div className="w-4 h-4 border-2 rounded-full border-accent bg-secondary" />
-
-        {/* Vertical line */}
-        {!isLast && (
-          <div className="absolute top-4 left-1/2 w-[2px] h-[calc(100%+1.5rem)] bg-accent transform -translate-x-1/2" />
-        )}
-      </motion.div>
-
-      {/* Content */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-        className="flex-1"
-      >
-        <div className="p-6 transition-shadow rounded-lg shadow-lg bg-primary hover:shadow-xl">
-          <h3 className="mb-2 text-xl font-bold text-accent">{title}</h3>
-          <p className="mb-1 font-medium text-textColor/90">{company}</p>
-          <p className="text-sm text-textColor/70">{period}</p>
+    <MotionContainer
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="relative"
+    >
+      <TimelineCircle type={type} />
+      {!isLast && (
+        <div className="absolute w-[1px] h-[97%] top-9 transform -translate-x-1/2 bg-textColor left-0 md:left-1/2" />
+      )}
+      <div className={`flex w-full md:w-1/2 ${containerClass}`}>
+        <div className="w-full pl-8 md:px-8 md:pl-auto">
+          <div
+            className={`flex flex-col self-end gap-2 p-4 bg-primary rounded-lg shadow-md items-start ${contentClass}`}
+          >
+            <h4 className="text-xl font-semibold text-accent">{title}</h4>
+            <div
+              className={`flex items-center gap-2 ${
+                isLeft ? "md:flex-row-reverse" : "md:flex-row"
+              }`}
+            >
+              <Building2 className="w-5 h-5" />
+              <h3 className="font-bold text-textColor">{company}</h3>
+            </div>
+            <div
+              className={`flex items-center gap-2  ${
+                isLeft ? "md:flex-row-reverse" : "md:flex-row"
+              }`}
+            >
+              <CalendarDays className="w-5 h-5" />
+              <span className="text-sm text-textColor">{period}</span>
+            </div>
+          </div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </MotionContainer>
   );
 };
 

@@ -8,6 +8,7 @@ export default {
         secondary: "var(--secondary)",
         accent: "var(--accent)",
         textColor: "var(--text)",
+        labelColor: "var(--label)",
       },
       fontFamily: {
         jetbrains: ["JetBrains Mono", "monospace"],

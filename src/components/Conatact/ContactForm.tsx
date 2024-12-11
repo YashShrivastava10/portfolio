@@ -1,3 +1,5 @@
+"use client";
+
 import { sendEmail } from "@/utils/sendEmail";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
@@ -25,7 +27,10 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form
+      onSubmit={handleSubmit}
+      className="p-6 space-y-4 rounded-lg bg-secondary"
+    >
       <div>
         <label htmlFor="name" className="block mb-2">
           Name
@@ -34,7 +39,7 @@ const ContactForm = () => {
           type="text"
           id="name"
           name="name"
-          className="w-full px-4 py-2 rounded-lg bg-secondary text-textColor focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full px-4 py-2 rounded-lg bg-primary text-textColor focus:outline-none focus:ring-2 focus:ring-accent"
           required
         />
       </div>
@@ -46,7 +51,7 @@ const ContactForm = () => {
           type="email"
           id="email"
           name="email"
-          className="w-full px-4 py-2 rounded-lg bg-secondary text-textColor focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full px-4 py-2 rounded-lg bg-primary text-textColor focus:outline-none focus:ring-2 focus:ring-accent"
           required
         />
       </div>
@@ -58,7 +63,7 @@ const ContactForm = () => {
           id="message"
           name="message"
           rows={4}
-          className="w-full px-4 py-2 rounded-lg bg-secondary text-textColor focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full px-4 py-2 rounded-lg bg-primary text-textColor focus:outline-none focus:ring-2 focus:ring-accent"
           required
         ></textarea>
       </div>

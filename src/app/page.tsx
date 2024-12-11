@@ -1,12 +1,12 @@
 // "use client";
 
-import About from "@/components/About";
-import Contact from "@/components/Conatact/Contact";
-import Experience from "@/components/Experience/Experience";
-import Header from "@/components/Header/Header";
-import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import Experience from "@/pages/Experience";
+import Header from "@/pages/Header";
+import Hero from "@/pages/Hero";
+import Projects from "@/pages/Projects";
+import Skills from "@/pages/Skills";
 import React from "react";
 import { Toaster } from "react-hot-toast";
 

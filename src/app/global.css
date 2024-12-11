@@ -7,24 +7,15 @@
 :root {
   --primary: #1a1a1a;
   --secondary: #252525;
-  --accent: #64ffda;
+  --accent: #00ff99;
   --text: #e6e6e6;
+  --label: #9a9a9a;
 }
 
 body {
   font-family: "JetBrains Mono", monospace;
   background-color: var(--primary);
   color: var(--text);
-}
-.social label {
-  width: 0;
-  scale: 0;
-  transition: all 0.5s;
-  transform-origin: left;
-}
-.social:hover label {
-  width: 100%;
-  scale: 1;
 }
 ::-webkit-scrollbar {
   width: 0px;
