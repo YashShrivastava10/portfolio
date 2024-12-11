@@ -6,7 +6,7 @@ import UserImage from "@/components/Hero/UserImage";
 const Hero = () => {
   return (
     <section
-      className="flex items-start min-h-screen pt-40 sm:items-center sm:pt-20"
+      className="flex items-start min-h-screen pt-20 sm:items-center"
       id="hero"
     >
       <div className="container px-4 mx-auto">
@@ -15,7 +15,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col flex-1 gap-2"
+            className="flex flex-col justify-center flex-1 gap-2"
           >
             <UserDescription />
           </MotionContainer>

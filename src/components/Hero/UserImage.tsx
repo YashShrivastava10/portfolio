@@ -8,7 +8,7 @@ const UserImage = () => {
       alt="Yash Shrivastava"
       width={256}
       height={256}
-      className="object-contain w-11/12 mx-auto rounded-full aspect-square lg:w-96 lg:h-96 mix-blend-lighten"
+      className="object-contain w-3/4 mx-auto rounded-full aspect-square lg:w-96 lg:h-96 mix-blend-lighten"
     />
   );
 };

@@ -6,7 +6,7 @@ import React from "react";
 const ImageCircle = () => {
   return (
     <motion.svg
-      className="absolute w-11/12 lg:w-96 aspect-square"
+      className="absolute w-3/4 lg:w-96 aspect-square"
       fill="transparent"
       viewBox="0 0 506 506"
       xmlns="http://www.w3.org/2000/svg"
