@@ -1,6 +1,6 @@
 import React from "react";
-import { ProjectType } from "./Projects";
 import { Github, Link as LinkIcon } from "lucide-react";
+import { ProjectType } from "@/pages/Projects";
 
 const Project = ({ project }: { project: ProjectType }) => (
   <>
