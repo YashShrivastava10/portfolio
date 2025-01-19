@@ -10,7 +10,7 @@ const Skills = () => {
         <CommonHeaderContainer>
           <>Skills & Technologies</>
         </CommonHeaderContainer>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 lg:gap-2 md:grid-cols-3">
           {/* Front-End Column */}
           <MotionContainer
             initial={{ opacity: 0, x: -50 }}
@@ -26,7 +26,7 @@ const Skills = () => {
           </MotionContainer>
           {/* Back-End Column */}
           <MotionContainer
-            initial={{ opacity: 0, scale: 0 }}
+            initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >

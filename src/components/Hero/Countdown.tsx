@@ -10,7 +10,7 @@ const Countdown = () => {
       <div className="flex items-center justify-start w-1/2 gap-2 text-5xl font-extrabold text-center md:justify-start text-accent md:text-left lg:text-5xl">
         <CountUp
           start={0}
-          end={calculateTotalExperienceRounded()}
+          end={Math.round(calculateTotalExperienceRounded())}
           duration={5}
           delay={2}
         />

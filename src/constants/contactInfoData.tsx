@@ -15,7 +15,7 @@ export const contactInfo = [
   {
     icon: <MapPin />,
     label: "Location",
-    value: "Madhya Pradesh, India",
+    value: "Gurugram, India",
     href: "",
   },
 ];
