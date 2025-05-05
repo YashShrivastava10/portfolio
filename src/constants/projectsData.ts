@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "Closetly",
+    description:
+      "A platform to browse clothing and accessories with price comparisons and direct links to trusted sites.",
+    image: "/Closetly.png",
+    technologies: ["React.js", "Node.js", "GCP", "Firestore", "Docker"],
+    github: "",
+    live: "https://www.closetly.in/",
+  },
+  {
     title: "Pizzeria",
     description:
       "A responsive e-commerce platform for pizza ordering with real-time cart tracking.",

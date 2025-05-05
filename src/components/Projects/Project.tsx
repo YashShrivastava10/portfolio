@@ -1,6 +1,5 @@
-import React from "react";
-import { Github, Link as LinkIcon } from "lucide-react";
 import { ProjectType } from "@/pages/Projects";
+import { Github, Link as LinkIcon } from "lucide-react";
 
 const Project = ({ project }: { project: ProjectType }) => (
   <>
@@ -31,15 +30,18 @@ const Project = ({ project }: { project: ProjectType }) => (
         ))}
       </div>
       <div className="flex gap-4">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 transition-all text-textColor hover:text-accent hover:scale-105"
-        >
-          <Github size={20} />
-          Code
-        </a>
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 transition-all text-textColor hover:text-accent hover:scale-105"
+          >
+            <Github size={20} />
+            Code
+          </a>
+        )}
+
         <a
           href={project.live}
           target="_blank"
