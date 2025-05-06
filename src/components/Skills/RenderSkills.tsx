@@ -1,21 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React from "react";
 
 const RenderSkills = ({ skills }: { skills: string[] }) => {
   return (
     <>
-      {skills.map((skill) => (
-        <motion.div
+      {skills.map((skill, idx) => (
+        <motion.span
           key={skill}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="px-4 py-3 text-center transition-all duration-300 border-2 rounded-lg lg:px-8 lg:py-4 border-secondary text-accent"
+          whileHover={{ color: "var(--accent)" }}
+          transition={{ duration: 0.2, delay: idx * 0.03 }}
+          className="px-3 py-1.5 text-sm bg-secondary/40 rounded text-textColor transition-colors duration-300"
         >
-          <span className="font-medium">{skill}</span>
-        </motion.div>
+          {skill}
+        </motion.span>
       ))}
     </>
   );

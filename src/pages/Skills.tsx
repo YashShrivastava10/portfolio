@@ -1,66 +1,7 @@
-// import CommonHeaderContainer from "@/components/common/CommonHeaderContainer";
-// import MotionContainer from "@/components/common/MotionContainer";
-// import RenderSkills from "@/components/Skills/RenderSkills";
-// import { techStack } from "@/constants/techStackData";
-
-// const Skills = () => {
-//   return (
-//     <section className="py-20" id="skills">
-//       <div className="container px-4 mx-auto">
-//         <CommonHeaderContainer>
-//           <>Skills & Technologies</>
-//         </CommonHeaderContainer>
-//         <div className="grid grid-cols-1 gap-6 lg:gap-2 md:grid-cols-3">
-//           {/* Front-End Column */}
-//           <MotionContainer
-//             initial={{ opacity: 0, x: -50 }}
-//             whileInView={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.5 }}
-//           >
-//             <h3 className="mb-6 text-xl font-semibold text-center">
-//               Front-End
-//             </h3>
-//             <div className="flex flex-wrap justify-center gap-2">
-//               <RenderSkills skills={techStack.frontend} />
-//             </div>
-//           </MotionContainer>
-//           {/* Back-End Column */}
-//           <MotionContainer
-//             initial={{ opacity: 0, scale: 0.5 }}
-//             whileInView={{ opacity: 1, scale: 1 }}
-//             transition={{ duration: 0.5 }}
-//           >
-//             <h3 className="mb-6 text-xl font-semibold text-center">Back-End</h3>
-//             <div className="flex flex-wrap justify-center gap-2">
-//               <RenderSkills skills={techStack.backend} />
-//             </div>
-//           </MotionContainer>
-
-//           {/* Tools Column */}
-//           <MotionContainer
-//             initial={{ opacity: 0, x: -50 }}
-//             whileInView={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.5 }}
-//           >
-//             <h3 className="mb-6 text-xl font-semibold text-center">Tools</h3>
-//             <div className="flex flex-wrap justify-center gap-2">
-//               <RenderSkills skills={techStack.tools} />
-//             </div>
-//           </MotionContainer>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Skills;
-
 import CommonHeaderContainer from "@/components/common/CommonHeaderContainer";
 import MotionContainer from "@/components/common/MotionContainer";
 import RenderSkills from "@/components/Skills/RenderSkills";
 import { techStack } from "@/constants/techStackData";
-
-// Type definitions
 interface TechStack {
   frontend: string[];
   backend: string[];
@@ -72,6 +13,7 @@ interface TechStack {
 interface TechCategory {
   category: string;
   skills: string[];
+  icon: string;
 }
 
 interface AnimationProps {
@@ -98,6 +40,7 @@ const Skills = (): JSX.Element => {
   ).map(([category, skills]) => ({
     category: formatCategoryName(category),
     skills,
+    icon: getCategoryIcon(category),
   }));
 
   // Helper function to format category names (e.g., "frontend" to "Front-End")
@@ -127,6 +70,21 @@ const Skills = (): JSX.Element => {
     }
   };
 
+  function getCategoryIcon(category: string): string {
+    switch (category.toLowerCase()) {
+      case "frontend":
+        return "🎨";
+      case "backend":
+        return "⚙️";
+      case "cloud":
+        return "☁️";
+      case "tools":
+        return "🛠️";
+      default:
+        return "💻";
+    }
+  }
+
   return (
     <section className="py-20" id="skills">
       <div className="container px-4 mx-auto">
@@ -134,13 +92,22 @@ const Skills = (): JSX.Element => {
           <>Skills & Technologies</>
         </CommonHeaderContainer>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+        <div className="md:grid-cols-2 lg:gap-8 grid grid-cols-1 gap-6">
           {techCategories.map((tech, index) => (
-            <MotionContainer key={tech.category} {...getAnimationProps(index)}>
-              <h3 className="mb-6 text-xl font-semibold text-center">
-                {tech.category}
-              </h3>
-              <div className="flex flex-wrap justify-center gap-2">
+            <MotionContainer
+              key={tech.category}
+              {...getAnimationProps(index)}
+              className="bg-secondary/20 backdrop-blur-sm rounded-xl border-secondary/30 p-6 border"
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-2xl" aria-hidden="true">
+                  {tech.icon}
+                </span>
+                <h3 className="text-accent text-lg font-medium">
+                  {tech.category}
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
                 <RenderSkills skills={tech.skills} />
               </div>
             </MotionContainer>

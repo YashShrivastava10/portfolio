@@ -6,11 +6,11 @@ import UserImage from "@/components/Hero/UserImage";
 const Hero = () => {
   return (
     <section
-      className="flex items-start min-h-screen pt-20 sm:items-center"
+      className="sm:items-center sm:py-20 flex items-start pt-20"
       id="hero"
     >
       <div className="container px-4 mx-auto">
-        <div className="flex flex-col-reverse items-center gap-6 md:gap-12 sm:flex-row">
+        <div className="md:gap-12 sm:flex-row flex flex-col-reverse items-center gap-6">
           <MotionContainer
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}

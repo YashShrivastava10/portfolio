@@ -18,6 +18,15 @@ export const projects = [
     live: "https://pizzeria-psi.vercel.app/",
   },
   {
+    title: "Klymate",
+    description:
+      "Track weather and climate visually with Klymate—featuring dark mode, location search, and personalized favorites.",
+    image: "/Klymate.png",
+    technologies: ["React.js", "Recharts", "Tanstack Query", "Shadcn"],
+    github: "https://github.com/YashShrivastava10/klymate",
+    live: "https://klymate.vercel.app/",
+  },
+  {
     title: "Tic-Tac-Toe",
     description:
       "A multiplayer Tic-Tac-Toe game with real-time updates and an interactive UI.",
