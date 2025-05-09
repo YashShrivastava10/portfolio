@@ -1,3 +1,4 @@
+import SendMail from "@/components/common/SendMail";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Experience from "@/pages/Experience";
@@ -10,6 +11,7 @@ import { Toaster } from "react-hot-toast";
 const Home = () => {
   return (
     <div className="bg-primary text-textColor w-screen h-screen">
+      <SendMail />
       <Header />
       <Toaster
         position="bottom-center"
