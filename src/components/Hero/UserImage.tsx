@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const UserImage = () => {
   return (
@@ -8,7 +7,8 @@ const UserImage = () => {
       alt="Yash Shrivastava"
       width={256}
       height={256}
-      className="object-contain w-3/4 mx-auto rounded-full aspect-square lg:w-96 lg:h-96 mix-blend-lighten"
+      className="aspect-square lg:w-96 lg:h-96 mix-blend-lighten object-cover w-3/4 mx-auto rounded-full"
+      unoptimized
     />
   );
 };
