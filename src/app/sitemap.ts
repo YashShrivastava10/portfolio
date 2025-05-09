@@ -4,9 +4,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: "https://portfolio-yash-shrivastava.vercel.app/",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "monthly",
+      priority: 1.0,
     },
   ];
 }

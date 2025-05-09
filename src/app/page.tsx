@@ -7,28 +7,47 @@ import Header from "@/pages/Header";
 import Hero from "@/pages/Hero";
 import Projects from "@/pages/Projects";
 import Skills from "@/pages/Skills";
-import React from "react";
+import Head from "next/head";
 import { Toaster } from "react-hot-toast";
 
 const Home = () => {
   return (
-    <div className="w-screen h-screen bg-primary text-textColor">
-      <Header />
-      <Toaster
-        position="bottom-center"
-        toastOptions={{
-          style: { minWidth: "fit-content" },
-        }}
-      />
-      <main className="w-full overflow-x-hidden">
-        <Hero />
-        <Skills />
-        <Experience />
-        <Projects />
-        <About />
-        <Contact />
-      </main>
-    </div>
+    <>
+      <Head>
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-SBFFWK1L0M"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SBFFWK1L0M');
+            `,
+          }}
+        />
+      </Head>
+      <div className="bg-primary text-textColor w-screen h-screen">
+        <Header />
+        <Toaster
+          position="bottom-center"
+          toastOptions={{
+            style: { minWidth: "fit-content" },
+          }}
+        />
+        <main className="w-full overflow-x-hidden">
+          <Hero />
+          <Skills />
+          <Experience />
+          <Projects />
+          <About />
+          <Contact />
+        </main>
+      </div>
+    </>
   );
 };
 
