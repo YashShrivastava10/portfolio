@@ -13,7 +13,7 @@ export const PageTransition = ({ children }: { children: React.ReactNode }) => {
           animate={{
             z: 20,
             opacity: 1,
-            transition: { delay: 1.5, ease: "easeInOut", duration: 0.4 },
+            transition: { delay: 1.5, ease: "easeInOut", duration: 0.3 },
           }}
           className="flex min-h-[calc(100vh-80px-101px)] flex-col sm:min-h-[calc(100vh-80px-65px)]"
         >
