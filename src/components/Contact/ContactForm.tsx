@@ -43,32 +43,26 @@ export const ContactForm = () => {
       </CardHeader>
       <CardContent>
         <form className="space-y-6" onSubmit={handleSubmit}>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="space-y-2">
-              <Label htmlFor="firstName">First Name</Label>
-              <Input
-                id="firstName"
-                placeholder="Yash"
-                className="border-border/50"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">Last Name</Label>
-              <Input
-                id="lastName"
-                placeholder="Shrivastava"
-                className="border-border/50"
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="name">Name</Label>
+            <Input
+              id="name"
+              name="name"
+              placeholder="Yash Shrivastava"
+              className="border-border/50"
+              required
+            />
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
+              name="email"
               type="email"
               placeholder="shrivastavayash10@gmail.com"
               className="border-border/50"
+              required
             />
           </div>
 
@@ -76,8 +70,10 @@ export const ContactForm = () => {
             <Label htmlFor="subject">Subject</Label>
             <Input
               id="subject"
+              name="subject"
               placeholder="Project Collaboration"
               className="border-border/50"
+              required
             />
           </div>
 
@@ -85,8 +81,10 @@ export const ContactForm = () => {
             <Label htmlFor="message">Message</Label>
             <Textarea
               id="message"
+              name="message"
               placeholder="Tell me about your project or how I can help you..."
               className="border-border/50 min-h-[120px]"
+              required
             />
           </div>
 
