@@ -3,6 +3,13 @@ import { Interest } from "@/components/About/Interest";
 import { MyStory } from "@/components/About/MyStory";
 import { PersonalInformation } from "@/components/About/PersonalInformation";
 import { ProfileImage } from "@/components/About/ProfileImage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Yash Shrivastava | Web Developer",
+  description:
+    "Learn about Yash Shrivastava, a passionate full-stack developer. Discover his journey, technical expertise, interests, and approach to building software solutions.",
+};
 
 const AboutPage = () => {
   return (

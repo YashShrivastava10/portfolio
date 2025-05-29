@@ -7,6 +7,13 @@ import {
 } from "@/components/ui";
 import { skills } from "@/constants/skills";
 import { Cloud, Code, Database, Wrench } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Technical Skills | Yash Shrivastava, Web Developer",
+  description:
+    "A comprehensive overview of Yash Shrivastava's full-stack development skills, including programming languages (e.g., JavaScript, Python), frameworks (e.g., React, Node.js), databases, and tools.",
+};
 
 const SkillsPage = () => {
   const getIcon = {

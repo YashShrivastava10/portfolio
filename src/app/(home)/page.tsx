@@ -1,11 +1,16 @@
-"use client";
-
 import { InteractiveCards } from "@/components/Home/InteractiveCards";
 import { SocialLinks } from "@/components/Home/SocialLinks";
 import { Button } from "@/components/ui";
 import { ROUTES } from "@/constants";
 import { ArrowRight } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Yash Shrivastava | Web Portfolio",
+  description:
+    "Explore the web developer portfolio of Yash Shrivastava. Discover innovative web projects, technical skills, and professional experience. Based in Madhya Pradesh, India",
+};
 
 export default function Home() {
   return (

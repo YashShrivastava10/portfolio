@@ -1,6 +1,13 @@
 import { ProjectCard } from "@/components/Projects/ProjectCard";
 import { featuredProjects, moreProjects } from "@/constants/projects";
 import { Layers, Star } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Full-Stack Projects | Portfolio of Yash Shrivastava",
+  description:
+    "Showcase of diverse full-stack development projects by Yash Shrivastava. Explore web applications, APIs, and solutions built using modern technologies.",
+};
 
 const ProjectsPage = () => {
   return (

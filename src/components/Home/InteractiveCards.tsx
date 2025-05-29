@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui";
 import { interactiveStats } from "@/constants/homeInteractiveStats";
 import { ArrowRight } from "lucide-react";

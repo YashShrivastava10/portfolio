@@ -3,7 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui";
 import { contactInfo } from "@/constants/contactInfo";
 import { socialLinks } from "@/constants/socialLinks";
 import { Clock } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Contact Yash Shrivastava | Web Developer for Hire",
+  description:
+    "Get in touch with Yash Shrivastava for full-stack development opportunities, project collaborations, or freelance work. Let's build something great together.",
+};
 
 const ContactPage = () => {
   return (
