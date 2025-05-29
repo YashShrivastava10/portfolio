@@ -25,7 +25,7 @@ export const ProfileImage = () => {
           className="relative size-70 lg:size-96"
         >
           <Image
-            src="/profile.png"
+            src="/profile-1.png"
             alt="Yash"
             fill
             className="rounded-3xl object-cover shadow-2xl"
