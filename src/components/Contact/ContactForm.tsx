@@ -26,7 +26,13 @@ export const ContactForm = () => {
     setIsLoading(true);
     const toastId = toast.loading("Sending...");
 
-    const result = await sendEmail(form);
+    const formData = new FormData(form);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
+    const updatedForm = { name, email, subject, message };
+    const result = await sendEmail(updatedForm, "contact-form");
 
     if (result) {
       form.reset();
