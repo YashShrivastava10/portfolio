@@ -13,7 +13,7 @@ export const socialLinks = [
   },
   {
     icon: Mail,
-    href: "mailto:shrivastavayas10@gmail.com",
+    href: "mailto:shrivastavayash10@gmail.com",
     label: "Email",
   },
 ];
