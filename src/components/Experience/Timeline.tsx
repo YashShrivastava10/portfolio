@@ -1,15 +1,9 @@
 "use client";
 
 import { educations, experiences } from "@/constants/experience";
-import {
-  Badge,
-  Briefcase,
-  Calendar,
-  GraduationCap,
-  MapPin,
-} from "lucide-react";
+import { Briefcase, Calendar, GraduationCap, MapPin } from "lucide-react";
 import { useState } from "react";
-import { Button, Card, CardContent } from "../ui";
+import { Badge, Button, Card, CardContent } from "../ui";
 
 export const Timeline = () => {
   const [activeTab, setActiveTab] = useState("experience");
