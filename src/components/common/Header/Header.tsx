@@ -24,9 +24,16 @@ export const Header = () => {
 
           {/* Call to Action and Theme Toggle */}
           <div className="flex items-center gap-4">
-            <Button className="rounded-full">
-              <Download />
-              Resume
+            <Button className="rounded-full" asChild>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="/Yash_Resume.pdf"
+                className="flex"
+              >
+                <Download />
+                Resume
+              </Link>
             </Button>
             <ThemeToggle />
           </div>
