@@ -24,7 +24,7 @@ export const ProjectCard = ({ label, icon, data }: ProjectCardProps) => {
         <h2 className="text-2xl font-semibold">{label}</h2>
       </label>
       <div
-        className={`grid w-full gap-6 ${label === "Featured Projects" ? "lg:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}
+        className={`grid w-full gap-6 ${label === "More Projects" ? "sm:grid-cols-2 lg:grid-cols-3" : "lg:grid-cols-2"}`}
       >
         {data.map((project) => (
           <Card
@@ -61,7 +61,7 @@ export const ProjectCard = ({ label, icon, data }: ProjectCardProps) => {
                     rel="noopener noreferrer"
                   >
                     <ExternalLink className="size-4" />
-                    Live Demo
+                    {label === "Open Source Contribution" ? "NPM" : "Live Demo"}
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="sm">

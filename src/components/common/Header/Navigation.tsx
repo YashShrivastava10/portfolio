@@ -25,10 +25,10 @@ import { useState } from "react";
 
 const navItems = [
   { label: "Home", href: ROUTES.HOME, icon: Home },
+  { label: "Projects", href: ROUTES.PROJECTS, icon: FolderKanban },
   { label: "Skills", href: ROUTES.SKILLS, icon: Code2 },
   { label: "Experience", href: ROUTES.EXPERIENCE, icon: Briefcase },
   { label: "About", href: ROUTES.ABOUT, icon: UserCircle },
-  { label: "Projects", href: ROUTES.PROJECTS, icon: FolderKanban },
   { label: "Contact", href: ROUTES.CONTACT, icon: Mail },
 ];
 

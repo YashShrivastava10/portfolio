@@ -1,12 +1,16 @@
 import { ProjectCard } from "@/components/Projects/ProjectCard";
-import { featuredProjects, moreProjects } from "@/constants/projects";
-import { Layers, Star } from "lucide-react";
+import {
+  featuredProjects,
+  moreProjects,
+  openSource,
+} from "@/constants/projects";
+import { Globe, Layers, Star } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Full-Stack Projects | Portfolio of Yash Shrivastava",
+  title: "Full-Stack & Open Source Projects | Portfolio of Yash Shrivastava",
   description:
-    "Showcase of diverse full-stack development projects by Yash Shrivastava. Explore web applications, APIs, and solutions built using modern technologies.",
+    "Showcase of full-stack and open source projects by Yash Shrivastava. Explore modern web apps, APIs, and community-driven tools built with React, Node.js, Tailwind, and more.",
 };
 
 const ProjectsPage = () => {
@@ -22,13 +26,18 @@ const ProjectsPage = () => {
         </p>
       </div>
       <ProjectCard
+        label="Open Source Contribution"
+        icon={<Globe className="text-blue-500" />}
+        data={openSource}
+      />
+      <ProjectCard
         label="Featured Projects"
         icon={<Star className="fill-yellow-500 text-yellow-500" />}
         data={featuredProjects}
       />
       <ProjectCard
         label="More Projects"
-        icon={<Layers className="text-blue-500" />}
+        icon={<Layers className="text-emerald-500" />}
         data={moreProjects}
       />
     </div>

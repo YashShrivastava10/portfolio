@@ -1,8 +1,8 @@
 export const ROUTES = {
   HOME: "/",
+  PROJECTS: "/projects",
   SKILLS: "/skills",
   EXPERIENCE: "/experience",
   ABOUT: "/about",
-  PROJECTS: "/projects",
   CONTACT: "/contact",
 };

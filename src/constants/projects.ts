@@ -1,3 +1,22 @@
+export const openSource = [
+  {
+    title: "create-modern-stack",
+    description:
+      "A powerful CLI to scaffold production-ready React/Next.js apps with Tailwind, Shadcn UI, routing, dark mode, and SEO — in under 60 seconds.",
+    image: "/cli.png",
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Tanstack Router",
+      "React Router",
+      "Zustand",
+    ],
+    github: "https://github.com/YashShrivastava10/create-modern-stack",
+    live: "https://www.npmjs.com/package/create-modern-stack",
+  },
+];
+
 export const featuredProjects = [
   {
     title: "Closetly",

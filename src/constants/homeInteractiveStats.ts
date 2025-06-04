@@ -1,5 +1,5 @@
 import { getRoundedYOE } from "@/utils/getYOE";
-import { Briefcase, Code2, FolderKanban, UserCircle } from "lucide-react";
+import { Briefcase, Code2, FolderKanban, Package } from "lucide-react";
 export const interactiveStats = [
   {
     icon: Briefcase,
@@ -18,6 +18,14 @@ export const interactiveStats = [
     href: "/skills",
   },
   {
+    icon: Package,
+    label: "Open Source",
+    value: "400+",
+    unit: "Downloads",
+    description: "NPM Package in 24hrs",
+    href: "/projects",
+  },
+  {
     icon: FolderKanban,
     label: "Projects",
     value: "15+",
@@ -25,12 +33,13 @@ export const interactiveStats = [
     description: "Successful Deliveries",
     href: "/projects",
   },
-  {
-    icon: UserCircle,
-    label: "About",
-    value: "My",
-    unit: "Story",
-    description: "Personal Journey",
-    href: "/about",
-  },
 ];
+//   {
+//     icon: UserCircle,
+//     label: "About",
+//     value: "My",
+//     unit: "Story",
+//     description: "Personal Journey",
+//     href: "/about",
+//   },
+// ];
