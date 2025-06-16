@@ -9,7 +9,7 @@ on:
 env:
   PROJECT_ID: portfolio-463107
   REGION: asia-south2
-  IMAGE_NAME: asia-south2-docker.pkg.dev/portfolio-463107/portfolio
+  IMAGE_NAME: asia-south2-docker.pkg.dev/portfolio-463107/portfolio/web
   SERVICE_NAME: portfolio
 
 jobs:
