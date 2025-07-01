@@ -16,6 +16,16 @@ export const GoogleAnalytics = () => {
               gtag('config', 'G-NDMPSME9CS');
           `}
       </Script>
+
+      <meta property="og:site_name" content="Yash Shrivastava" />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Yash Shrivastava",
+          url: "https://www.yashshrivastava.in",
+        })}
+      </script>
     </head>
   );
 };
