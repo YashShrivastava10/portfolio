@@ -28,7 +28,6 @@ export const SendMail = () => {
     if (process.env.NODE_ENV === "production") {
       sendVisitorInfo();
     }
-    sendVisitorInfo();
   }, []);
   return <></>;
 };
