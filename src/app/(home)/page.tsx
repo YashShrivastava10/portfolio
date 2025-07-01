@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Yash Shrivastava | Web Developer Portfolio",
   description:
     "Explore the web developer portfolio of Yash Shrivastava. Discover innovative web projects, technical skills, and professional experience. Based in Madhya Pradesh, India",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE}`,
+  },
 };
 
 export default function Home() {

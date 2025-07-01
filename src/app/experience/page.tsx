@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Professional Experience | Yash Shrivastava, Web Developer",
   description:
     "Review Yash Shrivastava's professional work history as a full-stack/software developer/web developer, detailing roles, responsibilities, and key accomplishments in previous projects.",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE}/experience`,
+  },
 };
 
 const ExperiencePage = () => {

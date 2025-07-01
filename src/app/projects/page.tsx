@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Full-Stack & Open Source Projects | Portfolio of Yash Shrivastava",
   description:
     "Showcase of full-stack and open source projects by Yash Shrivastava. Explore modern web apps, APIs, and community-driven tools built with React, Node.js, Tailwind, and more.",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE}/projects`,
+  },
 };
 
 const ProjectsPage = () => {

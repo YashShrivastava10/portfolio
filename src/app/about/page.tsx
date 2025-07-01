@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "About Yash Shrivastava | Web Developer",
   description:
     "Learn about Yash Shrivastava, a passionate full-stack developer. Discover his journey, technical expertise, interests, and approach to building software solutions.",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE}/about`,
+  },
 };
 
 const AboutPage = () => {

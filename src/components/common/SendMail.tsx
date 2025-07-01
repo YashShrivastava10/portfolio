@@ -12,12 +12,10 @@ export const SendMail = () => {
 
         const form = {
           user_agent: navigator.userAgent,
-          language: navigator.language,
           city: data.city,
           region: data.region,
           country: data.country_name,
           ip: data.ip,
-          time: new Date().toString(),
         };
         await sendEmail(form, "visit-portfolio");
 
@@ -30,6 +28,7 @@ export const SendMail = () => {
     if (process.env.NODE_ENV === "production") {
       sendVisitorInfo();
     }
+    sendVisitorInfo();
   }, []);
   return <></>;
 };

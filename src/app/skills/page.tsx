@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Technical Skills | Yash Shrivastava, Web Developer",
   description:
     "A comprehensive overview of Yash Shrivastava's full-stack development skills, including programming languages (e.g., JavaScript, Python), frameworks (e.g., React, Node.js), databases, and tools.",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE}/skills`,
+  },
 };
 
 const SkillsPage = () => {
