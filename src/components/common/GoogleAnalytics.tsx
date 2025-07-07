@@ -24,6 +24,7 @@ export const GoogleAnalytics = () => {
           "@type": "WebSite",
           name: "Yash Shrivastava",
           url: "https://www.yashshrivastava.in",
+          alternateName: "Yash Shrivastava Portfolio",
         })}
       </script>
     </head>

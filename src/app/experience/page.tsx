@@ -2,7 +2,7 @@ import { Timeline } from "@/components/Experience/Timeline";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Professional Experience | Yash Shrivastava, Web Developer",
+  title: "Professional Experience | Yash Shrivastava, Full-Stack Web Developer",
   description:
     "Review Yash Shrivastava's professional work history as a full-stack/software developer/web developer, detailing roles, responsibilities, and key accomplishments in previous projects.",
   alternates: {

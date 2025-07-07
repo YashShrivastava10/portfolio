@@ -7,9 +7,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Yash Shrivastava | Web Developer Portfolio",
+  title: "Yash Shrivastava | Full-Stack Web Developer Portfolio",
   description:
-    "Explore the web developer portfolio of Yash Shrivastava. Discover innovative web projects, technical skills, and professional experience. Based in Madhya Pradesh, India",
+    "Explore the full-stack web developer portfolio of Yash Shrivastava. Discover innovative web projects, technical skills, and professional experience. Based in Madhya Pradesh, India",
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE}`,
   },
@@ -23,9 +23,9 @@ export default function Home() {
           <span className="text-muted-foreground md:text-lg">
             Hello, I&apos;m
           </span>
-          <span className="text-4xl font-bold md:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl">
             Yash Shrivastava
-          </span>
+          </h1>
           <span className="text-primary text-xl font-medium md:text-3xl">
             Web Developer
           </span>

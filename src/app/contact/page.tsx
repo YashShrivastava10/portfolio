@@ -7,9 +7,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact Yash Shrivastava | Web Developer for Hire",
+  title: "Contact Yash Shrivastava | Full-Stack Web Developer for Hire",
   description:
-    "Get in touch with Yash Shrivastava for full-stack development opportunities, project collaborations, or freelance work. Let's build something great together.",
+    "Get in touch with Yash Shrivastava for full-stack web development opportunities, project collaborations, or freelance work. Let's build something great together.",
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE}/contact`,
   },
