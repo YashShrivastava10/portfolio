@@ -1,8 +1,24 @@
 export const experiences = [
   {
-    title: "Web Developer Analyst",
+    title: "Senior Software Engineer",
+    company: "Dentsu",
+    period: "Sept 2025 - Present",
+    location: "Bengaluru, India",
+    type: "job",
+    acheivements: [
+      "Give me a moment, I'm just getting started!",
+    ],
+    skills: [
+      "GCP",
+      "Node.js",
+      "React.js",
+      "Vertex AI",
+    ],
+  },
+  {
+    title: "Full-Stack Developer Analyst",
     company: "Accenture",
-    period: "Mar 2024 - Present",
+    period: "Mar 2024 - Sept 2025",
     location: "Remote, India",
     type: "job",
     acheivements: [
@@ -21,7 +37,7 @@ export const experiences = [
     ],
   },
   {
-    title: "Web Developer Associate",
+    title: "Full-Stack Developer Associate",
     company: "Accenture",
     period: "Dec 2021 - Mar 2024",
     location: "Remote, India",
