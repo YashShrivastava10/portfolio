@@ -18,22 +18,22 @@ export const openSource = [
 ];
 
 export const featuredProjects = [
-  {
-    title: "Closetly",
-    description:
-      "A platform to browse clothing and accessories with price comparisons and direct links to trusted sites.",
-    image: "/Closetly.png",
-    technologies: [
-      "React.js",
-      "Node.js",
-      "GCP",
-      "Firestore",
-      "Docker",
-      "Tanstack",
-    ],
-    github: "",
-    live: "https://www.closetly.in/",
-  },
+  // {
+  //   title: "Closetly",
+  //   description:
+  //     "A platform to browse clothing and accessories with price comparisons and direct links to trusted sites.",
+  //   image: "/Closetly.png",
+  //   technologies: [
+  //     "React.js",
+  //     "Node.js",
+  //     "GCP",
+  //     "Firestore",
+  //     "Docker",
+  //     "Tanstack",
+  //   ],
+  //   github: "",
+  //   live: "https://www.closetly.in/",
+  // },
   {
     title: "Klymate",
     description:

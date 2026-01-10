@@ -6,14 +6,12 @@ export const experiences = [
     location: "Bengaluru, India",
     type: "job",
     acheivements: [
-      "Give me a moment, I'm just getting started!",
+      "Built a secure, consent-driven OAuth workflow with refresh/revoke token handling and Secret Manager integration, ensuring compliant and reliable access to user video data.",
+      "Designed BigQuery data models and multi-query DV360 reporting architecture, merging datasets via shared keys to overcome API metric limitations and deliver unified insights.",
+      "Led end-to-end ownership from R&D and schema design to production deployment and optimization across Google and Meta advertising platforms.",
+      "Optimized cloud workloads using asynchronous processing (Cloud Tasks), improving throughput and reducing latency for large media downloads and uploads.",
     ],
-    skills: [
-      "GCP",
-      "Node.js",
-      "React.js",
-      "Vertex AI",
-    ],
+    skills: ["GCP", "Node.js", "DV360", "Data Portability"],
   },
   {
     title: "Full-Stack Developer Analyst",

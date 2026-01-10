@@ -9,7 +9,7 @@ import { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Yash Shrivastava | Full-Stack Web Developer Portfolio",
+  title: "Yash Shrivastava | Sr. Software Engineer Portfolio",
   description:
     "Explore the full-stack web developer portfolio of Yash Shrivastava. Discover innovative web projects, technical skills, and professional experience. Based in Madhya Pradesh, India",
   alternates: {

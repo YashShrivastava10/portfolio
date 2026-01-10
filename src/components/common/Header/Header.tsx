@@ -1,6 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage, Button } from "@/components/ui";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui";
 import { ROUTES } from "@/constants";
-import { Download } from "lucide-react";
 import Link from "next/link";
 import ThemeToggle from "../ThemeToggle";
 import { Navigation } from "./Navigation";
@@ -24,7 +23,7 @@ export const Header = () => {
 
           {/* Call to Action and Theme Toggle */}
           <div className="flex items-center gap-4">
-            <Button className="rounded-full" asChild>
+            {/* <Button className="rounded-full" asChild>
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,7 +33,7 @@ export const Header = () => {
                 <Download />
                 Resume
               </Link>
-            </Button>
+            </Button> */}
             <ThemeToggle />
           </div>
         </div>

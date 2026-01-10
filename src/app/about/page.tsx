@@ -6,7 +6,7 @@ import { ProfileImage } from "@/components/About/ProfileImage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Yash Shrivastava | Full-Stack Web Developer",
+  title: "About Yash Shrivastava | Sr. Software Engineer",
   description:
     "Learn about Yash Shrivastava, a passionate full-stack web developer. Discover his journey, technical expertise, interests, and approach to building software solutions.",
   alternates: {

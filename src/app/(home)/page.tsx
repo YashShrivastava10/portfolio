@@ -7,7 +7,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Yash Shrivastava | Full-Stack Web Developer Portfolio",
+  title: "Yash Shrivastava | Sr. Software Engineer Portfolio",
   description:
     "Explore the full-stack web developer portfolio of Yash Shrivastava. Discover innovative web projects, technical skills, and professional experience. Based in Madhya Pradesh, India",
   alternates: {
@@ -27,7 +27,7 @@ export default function Home() {
             Yash Shrivastava
           </h1>
           <span className="text-primary text-xl font-medium md:text-3xl">
-            Web Developer
+            Sr. Software Engineer
           </span>
         </div>
         <span className="text-muted-foreground text-center text-wrap md:text-left md:text-lg">
