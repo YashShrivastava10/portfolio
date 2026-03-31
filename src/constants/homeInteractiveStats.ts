@@ -1,5 +1,7 @@
+import { skillsCount } from "@/utils/formatSkillsCount";
 import { getRoundedYOE } from "@/utils/getYOE";
 import { Briefcase, Code2, FolderKanban, Package } from "lucide-react";
+
 export const interactiveStats = [
   {
     icon: Briefcase,
@@ -12,9 +14,9 @@ export const interactiveStats = [
   {
     icon: Code2,
     label: "Technologies",
-    value: "20+",
+    value: `${skillsCount}`,
     unit: "Skills",
-    description: "React, Node, Docker & More",
+    description: "Agentic AI, Node, Docker & More",
     href: "/skills",
   },
   {

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
 const SkillsPage = () => {
   const getIcon = {
     frontend: Code,
+    database: Database,
     backend: Database,
     "artificial intelligence": Sparkles,
     cloud: Cloud,
@@ -38,7 +39,7 @@ const SkillsPage = () => {
           development stack
         </p>
       </div>
-      <div className="lg: grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
         {Object.entries(skills).map(([cat, skill]) => {
           const Icon = getIcon[cat as keyof typeof getIcon];
           return (

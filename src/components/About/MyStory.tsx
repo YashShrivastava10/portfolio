@@ -1,3 +1,4 @@
+import { getRoundedYOE } from "@/utils/getYOE";
 import { Heart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui";
 
@@ -24,12 +25,12 @@ export const MyStory = () => {
           that I was building something from nothing.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          Fast forward ~4 years, and here I am! What started as curiosity about
-          frontend development has evolved into a full-stack journey. I&apos;ve
-          explored backend development, databases, cloud technologies, and even
-          DevOps. Each new technology feels like unlocking a new superpower, and
-          I love how the pieces of the puzzle keep fitting together to create
-          something bigger! 🚀
+          Fast forward {getRoundedYOE()} years, and here I am! What started as
+          curiosity about frontend development has evolved into a full-stack
+          journey. I&apos;ve explored backend development, databases, cloud
+          technologies, and even DevOps. Each new technology feels like
+          unlocking a new superpower, and I love how the pieces of the puzzle
+          keep fitting together to create something bigger! 🚀
         </p>
       </CardContent>
     </Card>
