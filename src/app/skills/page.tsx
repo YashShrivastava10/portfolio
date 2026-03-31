@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui";
 import { skills } from "@/constants/skills";
-import { Cloud, Code, Database, Wrench } from "lucide-react";
+import { Cloud, Code, Database, Sparkles, Wrench } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ const SkillsPage = () => {
   const getIcon = {
     frontend: Code,
     backend: Database,
+    "artificial intelligence": Sparkles,
     cloud: Cloud,
     tools: Wrench,
   };
