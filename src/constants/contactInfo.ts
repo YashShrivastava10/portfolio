@@ -16,7 +16,7 @@ export const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Madhya Pradesh",
+    value: "Hyderabad, India",
     href: "#",
   },
 ];

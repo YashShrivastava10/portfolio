@@ -47,20 +47,20 @@ export const Timeline = () => {
               }`}
             >
               {/* Timeline Dot */}
-              <div
-                className={`absolute top-0 rounded-full bg-purple-100 p-2 dark:bg-purple-900 ${
+              {/* <div
+                className={`absolute top-0 rounded-full p-2 bg-primary/10 ${
                   index % 2 === 0
                     ? "left-0 -translate-x-1/2 lg:left-0"
                     : "left-0 -translate-x-1/2 lg:right-0 lg:left-auto lg:translate-x-1/2"
                 }`}
               >
                 <Icon className="text-primary size-5" />
-              </div>
+              </div> */}
 
               <Card
                 className={`overflow-hidden border-l-4 ${
                   isExp
-                    ? "border-l-purple-600 dark:border-l-purple-600"
+                    ? "border-l-primary dark:border-l-primary"
                     : "border-l-amber-500 dark:border-l-amber-500"
                 }`}
               >

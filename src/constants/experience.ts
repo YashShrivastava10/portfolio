@@ -6,12 +6,17 @@ export const experiences = [
     location: "Bengaluru, India",
     type: "job",
     acheivements: [
-      "Built a secure, consent-driven OAuth workflow with refresh/revoke token handling and Secret Manager integration, ensuring compliant and reliable access to user video data.",
+      "Designed and developed multi-agent AI solutions using Google ADK 2.0, workflow graphs, and Google Cloud MCP servers, improving user engagement and reducing operational costs by 70%.",
+      // "Built AI agents for trend research, client-specific trend recommendations, and experiment impact prediction based on industry verticals and campaign KPIs.",
+      "Implemented structured agent workflows with input/output schemas, input validation, and standardized response formats to improve reliability and consistency.",
+      "Designed end-to-end architecture for integrating AI agents into existing applications, covering service integration, real-time versus precomputed execution, data flow, and automated CI/CD pipelines.",
+      // "Designed and optimized multiple database schemas to support evolving business requirements, efficient data access, and scalable application features.",
+      // "Built a secure, consent-driven OAuth workflow with refresh/revoke token handling and Secret Manager integration, ensuring compliant and reliable access to user video data.",
       "Designed BigQuery data models and multi-query DV360 reporting architecture, merging datasets via shared keys to overcome API metric limitations and deliver unified insights.",
       "Led end-to-end ownership from R&D and schema design to production deployment and optimization across Google and Meta advertising platforms.",
       "Optimized cloud workloads using asynchronous processing (Cloud Tasks), improving throughput and reducing latency for large media downloads and uploads.",
     ],
-    skills: ["GCP", "Node.js", "DV360", "Data Portability"],
+    skills: ["Agentic AI", "Google ADK", "GCP", "Node.js", "DV360",],
   },
   {
     title: "Full-Stack Developer Analyst",
@@ -83,7 +88,7 @@ export const educations = [
     location: "Madhya Pradesh, India",
     period: "Mar 2017",
     acheivements: [
-      "Completed 12th with 88% in PCM (Physics, Chemistry, Math).",
+      "Completed 12th with 88% in PCM (Physics, Chemistry, Maths).",
     ],
     skills: [],
   },

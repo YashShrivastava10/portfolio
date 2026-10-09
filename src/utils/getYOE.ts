@@ -21,6 +21,10 @@ export const getRoundedYOE = (): string => {
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
 
+  if (months === 0) {
+    return `${years}`;
+  }
+
   const rangeKey: MonthRangeKey =
     months <= 3 ? "1-3" : months <= 6 ? "4-6" : months <= 10 ? "7-10" : "gt10";
 

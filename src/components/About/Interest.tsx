@@ -2,11 +2,11 @@ import { Drumstick, Gamepad2, MonitorPlay, Smartphone, Tv } from "lucide-react";
 import { Badge, Card, CardContent, CardHeader, CardTitle } from "../ui";
 
 const interests = [
-  { label: "Smartphones & Gadgets", icon: Smartphone },
-  { label: "Gaming", icon: Gamepad2 },
-  { label: "Web Series", icon: MonitorPlay },
-  { label: "Anime", icon: Tv },
   { label: "Foodie", icon: Drumstick },
+  { label: "Gaming", icon: Gamepad2 },
+  { label: "Anime", icon: Tv },
+  { label: "Web Series", icon: MonitorPlay },
+  { label: "Smartphones & Gadgets", icon: Smartphone },
 ];
 
 export const Interest = () => {

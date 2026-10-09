@@ -2,7 +2,7 @@ import Script from "next/script";
 
 export const GoogleAnalytics = () => {
   return (
-    <head>
+    <>
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-NDMPSME9CS"
@@ -27,6 +27,6 @@ export const GoogleAnalytics = () => {
           alternateName: "Yash Shrivastava Portfolio",
         })}
       </script>
-    </head>
+    </>
   );
 };

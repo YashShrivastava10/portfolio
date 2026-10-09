@@ -31,7 +31,7 @@ export default function Home() {
           </span>
         </div>
         <span className="text-muted-foreground text-center text-wrap md:text-left md:text-lg">
-          Crafting modern web apps — fast, efficient, and built to scale.
+          Building scalable software and AI solutions.
         </span>
         <div className="flex justify-center md:justify-start">
           <Button size="lg" className="rounded-full" asChild>

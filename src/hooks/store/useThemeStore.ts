@@ -12,6 +12,11 @@ type ThemeStore = {
 const getSystemTheme = (): "light" | "dark" =>
   window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
+const getSavedTheme = (): Theme => {
+  const savedTheme = localStorage.getItem("theme");
+  return savedTheme === "light" || savedTheme === "dark" ? savedTheme : "system";
+};
+
 const applyTheme = (theme: Theme) => {
   const root = document.documentElement;
   const actual = theme === "system" ? getSystemTheme() : theme;
@@ -32,7 +37,12 @@ export const useThemeStore = create<ThemeStore>()(
         }
         set({
           theme,
-          resolvedTheme: theme === "system" ? getSystemTheme() : theme,
+          resolvedTheme:
+            typeof window === "undefined"
+              ? "light"
+              : theme === "system"
+                ? getSystemTheme()
+                : theme,
         });
       },
     };
@@ -41,7 +51,7 @@ export const useThemeStore = create<ThemeStore>()(
     if (typeof window !== "undefined") {
       // Use requestAnimationFrame to ensure this runs after React hydration
       requestAnimationFrame(() => {
-        const savedTheme = (localStorage.getItem("theme") as Theme) || "system";
+        const savedTheme = getSavedTheme();
         const actualResolved =
           savedTheme === "system" ? getSystemTheme() : savedTheme;
 

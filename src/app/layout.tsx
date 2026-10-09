@@ -6,6 +6,7 @@ import { SendMail } from "@/components/common/SendMail";
 import { StairTransition } from "@/components/common/StairTransition";
 import { Toaster } from "@/components/ui/sonner";
 import { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,8 +24,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <GoogleAnalytics />
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`(() => {
+            const savedTheme = localStorage.getItem("theme");
+            const theme =
+              savedTheme === "light" || savedTheme === "dark"
+                ? savedTheme
+                : "system";
+            const resolvedTheme =
+              theme === "system"
+                ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                  ? "dark"
+                  : "light"
+                : theme;
+
+            document.documentElement.classList.remove("light", "dark");
+            document.documentElement.classList.add(resolvedTheme);
+          })();`}
+        </Script>
+        <GoogleAnalytics />
+      </head>
       <body className="antialiased">
         <SendMail />
         <Toaster

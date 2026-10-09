@@ -34,6 +34,7 @@ export const skills = {
     "Next.js",
     "Python",
     "Express.js",
+    "FastAPI",
     "Auth.js",
     "Passport.js",
     "Zod",

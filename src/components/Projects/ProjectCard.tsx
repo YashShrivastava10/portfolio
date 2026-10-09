@@ -64,16 +64,17 @@ export const ProjectCard = ({ label, icon, data }: ProjectCardProps) => {
                     {label === "Open Source Contribution" ? "NPM" : "Live Demo"}
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="sm">
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github className="size-4" />
-                    Code
-                  </Link>
-                </Button>
+                {project.github && (
+                  <Button asChild variant="outline" size="sm">
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="size-4" />
+                      Code
+                    </Link>
+                  </Button>)}
               </div>
             </CardContent>
           </Card>

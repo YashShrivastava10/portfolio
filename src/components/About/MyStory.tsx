@@ -13,26 +13,45 @@ export const MyStory = () => {
       </CardHeader>
       <CardContent className="space-y-4">
         <p className="text-muted-foreground leading-relaxed">
-          I&apos;ll be honest — I had zero exposure to coding before college.
-          The first time I heard the word &ldquo;coding&ldquo; was during my
-          freshman year, and let me tell you, it was intimidating! 😅
+          I&apos;ll be honest, I had zero exposure to coding before college. The
+          first time I heard the word &ldquo;coding&rdquo; was during my
+          freshman year, and it felt intimidating! 😅
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          Those early days were rough. I struggled with basic concepts, spent
-          countless hours debugging simple programs, and questioned if I was cut
-          out for this. But something kept me going — maybe it was the
-          satisfaction of finally getting that code to work, or the realization
-          that I was building something from nothing.
+          The beginning wasn&apos;t easy. I struggled with the basics, spent
+          hours debugging simple programs, and often wondered if I was cut out
+          for this. But every time I solved a problem or got something working,
+          it motivated me to keep going. Slowly, what once felt complicated
+          started making sense, and I realized how much I enjoyed building
+          things with code.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          Fast forward {getRoundedYOE()} years, and here I am! What started as
-          curiosity about frontend development has evolved into a full-stack
-          journey. I&apos;ve explored backend development, databases, cloud
-          technologies, and even DevOps. Each new technology feels like
-          unlocking a new superpower, and I love how the pieces of the puzzle
-          keep fitting together to create something bigger! 🚀
+          Fast forward {getRoundedYOE()} years, and that curiosity has taken
+          me much further than I imagined. What started with frontend
+          development has grown into a full-stack journey with React, Next.js,
+          Node.js, and Express. Along the way, I&apos;ve worked with databases
+          like MongoDB, Firestore, and BigQuery, explored cloud technologies
+          with Google Cloud and AWS, and streamlined development and deployment
+          using Docker and CI/CD pipelines.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          More recently, I&apos;ve stepped into the world of Agentic AI,
+          building AI-powered solutions using Python, Google ADK, and MCP
+          servers. From designing scalable application architectures to
+          integrating intelligent agents into existing systems, I&apos;m
+          constantly finding new ways to solve problems and build smarter
+          products.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          Looking back, it&apos;s crazy to think how far I&apos;ve come since
+          those first few lines of code. I&apos;m still learning, still
+          experimenting, and still excited about what&apos;s next. For me, the
+          best part of software development is that there&apos;s always
+          something new to explore and another idea waiting to be brought to
+          life. 🚀
         </p>
       </CardContent>
+
     </Card>
   );
 };

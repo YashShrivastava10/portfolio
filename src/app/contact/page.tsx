@@ -2,7 +2,7 @@ import { ContactForm } from "@/components/Contact/ContactForm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui";
 import { contactInfo } from "@/constants/contactInfo";
 import { socialLinks } from "@/constants/socialLinks";
-import { Clock } from "lucide-react";
+// import { Clock } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -27,7 +27,7 @@ const ContactPage = () => {
           from you. Let&apos;s create something amazing together!
         </p>
       </div>
-      <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2">
+      <div className="grid w-full max-w-5xl grid-cols-1 items-start gap-4 sm:grid-cols-2">
         <ContactForm />
         <div className="space-y-4">
           {/* Contact Details */}
@@ -85,31 +85,31 @@ const ContactPage = () => {
             </CardContent>
           </Card>
 
-          {/* Availability */}
-          <div>
-            <Card className="from-primary/5 to-primary/10 dark:border-primary/20 bg-gradient-to-r">
-              <CardContent>
-                <div className="text-center">
-                  <div className="bg-primary/20 mx-auto mb-4 flex size-12 items-center justify-center rounded-full">
-                    <Clock className="text-primary h-6 w-6" />
-                  </div>
-                  <h3 className="mb-2 text-lg font-semibold">
-                    Available for Freelance
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    I&apos;m currently available for freelance projects and
-                    collaborations.
-                  </p>
-                  <div className="flex items-center justify-center gap-2">
-                    <div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
-                    <span className="text-sm font-medium text-green-600 dark:text-green-400">
-                      Available Now
-                    </span>
-                  </div>
+          {/* Availablity */}
+          {/*
+          <Card className="from-primary/5 to-primary/10 dark:border-primary/20 bg-gradient-to-r">
+            <CardContent>
+              <div className="text-center">
+                <div className="bg-primary/20 mx-auto mb-4 flex size-12 items-center justify-center rounded-full">
+                  <Clock className="text-primary h-6 w-6" />
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+                <h3 className="mb-2 text-lg font-semibold">
+                  Available for Freelance
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  I&apos;m currently available for freelance projects and
+                  collaborations.
+                </p>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
+                  <span className="text-sm font-medium text-green-600 dark:text-green-400">
+                    Available Now
+                  </span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          */}
         </div>
       </div>
     </div>
