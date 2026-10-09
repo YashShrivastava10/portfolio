@@ -1,5 +1,5 @@
 import { getRoundedYOE } from "@/utils/getYOE";
-import { Briefcase, Calendar, Flag, IdCard, MapPin, User } from "lucide-react";
+import { Calendar, Flag, IdCard, MapPin, User } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui";
 
 const personalInfo = [
@@ -13,11 +13,11 @@ const personalInfo = [
     label: "Years of Experience",
     value: `${getRoundedYOE()} Years`,
   },
-  {
-    icon: Briefcase,
-    label: "Freelancing",
-    value: "Available",
-  },
+  // {
+  //   icon: Briefcase,
+  //   label: "Freelancing",
+  //   value: "Available",
+  // },
   {
     icon: Flag,
     label: "Nationality",

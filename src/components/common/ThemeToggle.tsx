@@ -25,7 +25,11 @@ export default function ThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="focus-visible:border-transparent focus-visible:bg-accent focus-visible:ring-0"
+        >
           <Icon className="size-5" />
         </Button>
       </DropdownMenuTrigger>

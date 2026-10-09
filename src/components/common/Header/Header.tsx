@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui";
 import { ROUTES } from "@/constants";
 import Link from "next/link";
+import ColorPaletteToggle from "../ColorPaletteToggle";
 import ThemeToggle from "../ThemeToggle";
 import { Navigation } from "./Navigation";
 
@@ -34,6 +35,7 @@ export const Header = () => {
                 Resume
               </Link>
             </Button> */}
+            <ColorPaletteToggle />
             <ThemeToggle />
           </div>
         </div>

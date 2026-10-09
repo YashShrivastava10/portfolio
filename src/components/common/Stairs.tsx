@@ -29,7 +29,7 @@ export const Stairs = () => {
               ease: "easeInOut",
               delay: reverseIndex(index, stepCount) * 0.1,
             }}
-            className="bg-foreground relative h-full w-full"
+            className="bg-primary/10 relative h-full w-full"
           />
         );
       })}

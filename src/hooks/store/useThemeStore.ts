@@ -2,11 +2,14 @@ import { create } from "zustand";
 import { subscribeWithSelector } from "zustand/middleware";
 
 export type Theme = "light" | "dark" | "system";
+export type ColorPalette = "default" | "blue" | "purple" | "red";
 
 type ThemeStore = {
   theme: Theme;
   resolvedTheme: "light" | "dark";
+  colorPalette: ColorPalette;
   setTheme: (theme: Theme) => void;
+  setColorPalette: (colorPalette: ColorPalette) => void;
 };
 
 const getSystemTheme = (): "light" | "dark" =>
@@ -17,11 +20,24 @@ const getSavedTheme = (): Theme => {
   return savedTheme === "light" || savedTheme === "dark" ? savedTheme : "system";
 };
 
+const getSavedColorPalette = (): ColorPalette => {
+  const savedColorPalette = localStorage.getItem("colorPalette");
+  return savedColorPalette === "blue" ||
+    savedColorPalette === "purple" ||
+    savedColorPalette === "red"
+    ? savedColorPalette
+    : "default";
+};
+
 const applyTheme = (theme: Theme) => {
   const root = document.documentElement;
   const actual = theme === "system" ? getSystemTheme() : theme;
   root.classList.remove("light", "dark");
   root.classList.add(actual);
+};
+
+const applyColorPalette = (colorPalette: ColorPalette) => {
+  document.documentElement.dataset.color = colorPalette;
 };
 
 export const useThemeStore = create<ThemeStore>()(
@@ -30,6 +46,7 @@ export const useThemeStore = create<ThemeStore>()(
     const initialState = {
       theme: "system" as Theme,
       resolvedTheme: "light" as "light" | "dark",
+      colorPalette: "default" as ColorPalette,
       setTheme: (theme: Theme) => {
         if (typeof window !== "undefined") {
           localStorage.setItem("theme", theme);
@@ -45,6 +62,13 @@ export const useThemeStore = create<ThemeStore>()(
                 : theme,
         });
       },
+      setColorPalette: (colorPalette: ColorPalette) => {
+        if (typeof window !== "undefined") {
+          localStorage.setItem("colorPalette", colorPalette);
+          applyColorPalette(colorPalette);
+        }
+        set({ colorPalette });
+      },
     };
 
     // Client-side hydration logic
@@ -52,14 +76,17 @@ export const useThemeStore = create<ThemeStore>()(
       // Use requestAnimationFrame to ensure this runs after React hydration
       requestAnimationFrame(() => {
         const savedTheme = getSavedTheme();
+        const savedColorPalette = getSavedColorPalette();
         const actualResolved =
           savedTheme === "system" ? getSystemTheme() : savedTheme;
 
         applyTheme(savedTheme);
+        applyColorPalette(savedColorPalette);
 
         set({
           theme: savedTheme,
           resolvedTheme: actualResolved,
+          colorPalette: savedColorPalette,
         });
 
         // System change listener
