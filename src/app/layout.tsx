@@ -7,7 +7,6 @@ import { StairTransition } from "@/components/common/StairTransition";
 import { Toaster } from "@/components/ui/sonner";
 import { Metadata } from "next";
 import Script from "next/script";
-// @ts-expect-error Next.js handles this global CSS import at build time.
 import "./globals.css";
 
 export const metadata: Metadata = {
